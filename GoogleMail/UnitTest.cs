@@ -1,4 +1,4 @@
-using NUnit.Framework;
+п»їusing NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -33,19 +33,19 @@ namespace GoogleMail
         // locators:
         string input_email = "input";
         string input_pass = "//input[@type='password']";
-        string button_go = "//span[text()='Далее']";
-        string button_menu = "//a[@aria-label='Приложения Google']";
-        string button_mail_app = "//a//span[contains(text(), 'Почта')]";
-        string indraft = "//*[contains(text(), 'Черновики')]";
-        string button_addletter = "//*[contains(text(), 'Написать')]";
+        string button_go = "//span[text()='Р”Р°Р»РµРµ']";
+        string button_menu = "//a[@aria-label='РџСЂРёР»РѕР¶РµРЅРёСЏ Google']";
+        string button_mail_app = "//a//span[contains(text(), 'РџРѕС‡С‚Р°')]";
+        string indraft = "//*[contains(text(), 'Р§РµСЂРЅРѕРІРёРєРё')]";
+        string button_addletter = "//*[contains(text(), 'РќР°РїРёСЃР°С‚СЊ')]";
         string field_letter = "//*[contains(@role, 'textbox')]";
-        string button_close = "//*[contains(@alt, 'Закрыть')]";
-        string button_deleteletter = "//*[contains(text(), 'Удалить черновики')]";
+        string button_close = "//*[contains(@alt, 'Р—Р°РєСЂС‹С‚СЊ')]";
+        string button_deleteletter = "//*[contains(text(), 'РЈРґР°Р»РёС‚СЊ С‡РµСЂРЅРѕРІРёРєРё')]";
         string row = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div[3]/div[2]/div/table/tbody/tr";
         string checkbox = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div[1]/div/div[1]/span";
-        string button_account = "//*[contains(@aria-label, 'Аккаунт Google')]";
-        string popup_abautaccount = "/html/body/div[7]/div[3]/div/div[1]/div[4]/header/div[2]/div[5]";
-        string button_exit = "//a[contains(text(), 'Выйти')]";
+        string button_account = "//*[contains(@aria-label, 'РђРєРєР°СѓРЅС‚ Google')]";
+        string popup_abautaccount = "//*[contains(@aria-label, 'РРЅС„РѕСЂРјР°С†РёСЏ РѕР± Р°РєРєР°СѓРЅС‚Рµ')]";
+        string button_exit = "//a[contains(text(), 'Р’С‹Р№С‚Рё')]";
 
         //functions:
         public void DeleteLetter(WebDriverWait wait)
@@ -150,7 +150,7 @@ namespace GoogleMail
             elem_button_close = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(button_close)));
             elem_button_close.Click();
 
-            Assert.AreEqual(value_update, textbodyletter, "The draft wasn’t updated!");
+            Assert.AreEqual(value_update, textbodyletter, "The draft wasnвЂ™t updated!");
 
             DeleteLetter(wait);
             SingOut(wait);
